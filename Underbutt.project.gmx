@@ -46,17 +46,10 @@
       <sprite>sprites\spr_mom_l</sprite>
       <sprite>sprites\spr_mom_r</sprite>
     </sprites>
-    <sprites name="Intro">
-      <sprite>sprites\spr_introimage_0</sprite>
-      <sprite>sprites\spr_introimage_1</sprite>
-      <sprite>sprites\spr_introimage_2</sprite>
-      <sprite>sprites\spr_no_more</sprite>
-    </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_graydoor</sprite>
       <sprite>sprites\spr_object</sprite>
     </sprites>
-    <sprite>sprites\spr_text_new</sprite>
     <sprite>sprites\spr_fade</sprite>
     <sprite>sprites\spr_firstwarp</sprite>
     <sprite>sprites\spr_black</sprite>
@@ -65,12 +58,6 @@
     <sprite>sprites\spr_rightslantcollision</sprite>
     <sprite>sprites\spr_sanscollison</sprite>
     <sprite>sprites\spr_sans</sprite>
-    <sprite>sprites\spr_meetflowey</sprite>
-    <sprite>sprites\spr_flower</sprite>
-    <sprite>sprites\spr_tobdog_r</sprite>
-    <sprite>sprites\spr_tobdog_sleep</sprite>
-    <sprite>sprites\spr_tobdog_sleep_fire</sprite>
-    <sprite>sprites\spr_tobdog_l</sprite>
     <sprite>sprites\spr_portrait</sprite>
     <sprite>sprites\spr_livingroom_chair</sprite>
     <sprite>sprites\spr_livingroom_table</sprite>
@@ -98,6 +85,17 @@
     <font>fonts\fnt_8bit</font>
   </fonts>
   <objects name="objects">
+    <objects name="General">
+      <object>objects\obj_player</object>
+      <object>objects\obj_graydoor</object>
+      <object>objects\obj_collision</object>
+      <object>objects\obj_leftslantcollision</object>
+      <object>objects\obj_rightslantcollision</object>
+      <object>objects\obj_black</object>
+      <object>objects\obj_camera</object>
+      <object>objects\obj_dialogue</object>
+      <object>objects\obj_timekeeper</object>
+    </objects>
     <objects name="Warps">
       <objects name="Grillbz">
         <object>objects\wrp_0to1</object>
@@ -108,19 +106,14 @@
         <object>objects\wrp_2to3</object>
       </objects>
     </objects>
-    <object>objects\obj_player</object>
-    <object>objects\obj_graydoor</object>
-    <object>objects\obj_collision</object>
-    <object>objects\obj_leftslantcollision</object>
-    <object>objects\obj_rightslantcollision</object>
-    <object>objects\obj_sans</object>
-    <object>objects\obj_black</object>
-    <object>objects\obj_camera</object>
-    <object>objects\obj_dialogue</object>
-    <object>objects\obj_livingroom_chair</object>
-    <object>objects\obj_livingroom_table</object>
-    <object>objects\obj_livingroom_couch</object>
-    <object>objects\obj_timekeeper</object>
+    <objects name="Grillbz">
+      <object>objects\obj_sans</object>
+    </objects>
+    <objects name="Ness">
+      <object>objects\obj_livingroom_chair</object>
+      <object>objects\obj_livingroom_table</object>
+      <object>objects\obj_livingroom_couch</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_grillbys_abandoned</room>

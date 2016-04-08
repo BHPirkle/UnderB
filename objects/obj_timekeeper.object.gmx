@@ -26,14 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>/// Initiate a few variables.
-global.timePlayed = 0;
-alarm[0] = 60;
+file = file_text_open_write("file0.txt");
+fileRead = file_text_open_read("file0.txt");
+global.timePlayed = file_text_read_real(fileRead);
+alarm[1] = 60;
+t = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,6 +55,8 @@ alarm[0] = 60;
             <kind>1</kind>
             <string>/// Keeps time.
 global.timePlayed++;
+
+file_text_write_real(file, global.timePlayed);
 alarm[0] = 60;
 </string>
           </argument>
