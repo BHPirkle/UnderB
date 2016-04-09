@@ -7,6 +7,7 @@ down = keyboard_check(vk_down); // Down arrow key.
 left = keyboard_check(vk_left); // Left arrow key.
 right = keyboard_check(vk_right); // Right arrow key.
 interact = keyboard_check_released(vk_enter); // Interaction key.
+keyboard_set_map(ord("Z"), interact);
 closeBox = keyboard_check_direct(vk_rshift); // Key that closes text boxes.
 close = keyboard_check_released(vk_escape); // Close game key.
 fullscreen = keyboard_check_released(vk_f4); // Fullscreen key.

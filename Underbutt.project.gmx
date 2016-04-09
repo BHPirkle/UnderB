@@ -18,6 +18,9 @@
     <sound>sound\sfx_doorclose</sound>
     <sound>sound\sfx_ebtext</sound>
     <sound>sound\sfx_steps</sound>
+    <sound>sound\sfx_reflect</sound>
+    <sound>sound\sfx_cycle</sound>
+    <sound>sound\sfx_select</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -63,13 +66,14 @@
     <sprite>sprites\spr_livingroom_table</sprite>
     <sprite>sprites\spr_livingroom_couch</sprite>
     <sprite>sprites\spr_timekeeper</sprite>
+    <sprite>sprites\spr_heart</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
     <background>background\bg_ness_livingroom</background>
     <background>background\bg_ness_hallway</background>
     <background>background\bg_ness_herroom</background>
-    <background>background\bg_ness_hisroom</background>
+    <background>background\bg_ness_reflection</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -95,6 +99,7 @@
       <object>objects\obj_camera</object>
       <object>objects\obj_dialogue</object>
       <object>objects\obj_timekeeper</object>
+      <object>objects\obj_menu</object>
     </objects>
     <objects name="Warps">
       <objects name="Grillbz">
@@ -116,6 +121,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_grillbys_abandoned</room>
     <room>rooms\rm_ness_livingroom</room>
     <room>rooms\rm_ness_hallway</room>

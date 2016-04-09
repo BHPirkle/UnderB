@@ -4,9 +4,6 @@ get_input();
 
 imgspd = 0.10;
 
-if (four and two) {
-    show_message(string(global.timePlayed));
-}
 if (!listening) {
     if (up) {
         if (!earthbound) {
