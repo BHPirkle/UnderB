@@ -48,6 +48,7 @@
       <sprite>sprites\spr_mom_d</sprite>
       <sprite>sprites\spr_mom_l</sprite>
       <sprite>sprites\spr_mom_r</sprite>
+      <sprite>sprites\spr_mom_dummy</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_graydoor</sprite>
@@ -57,6 +58,7 @@
     <sprite>sprites\spr_firstwarp</sprite>
     <sprite>sprites\spr_black</sprite>
     <sprite>sprites\spr_collision</sprite>
+    <sprite>sprites\spr_npc_collision</sprite>
     <sprite>sprites\spr_leftslantcollision</sprite>
     <sprite>sprites\spr_rightslantcollision</sprite>
     <sprite>sprites\spr_sanscollison</sprite>
@@ -91,8 +93,10 @@
   <objects name="objects">
     <objects name="General">
       <object>objects\obj_player</object>
+      <object>objects\obj_npc_parent</object>
       <object>objects\obj_graydoor</object>
       <object>objects\obj_collision</object>
+      <object>objects\obj_npc_collision</object>
       <object>objects\obj_leftslantcollision</object>
       <object>objects\obj_rightslantcollision</object>
       <object>objects\obj_black</object>
@@ -118,6 +122,8 @@
       <object>objects\obj_livingroom_chair</object>
       <object>objects\obj_livingroom_table</object>
       <object>objects\obj_livingroom_couch</object>
+      <object>objects\obj_mom</object>
+      <object>objects\obj_mom_dummy</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -1,75 +1,53 @@
-/// NPCMove(delay, move time);
-var delay = argument0;
-var moveTime = argument1;
-var imgspd = 0.07;
-t++;
-// Timer variable.
+/// NPCMove(up, down, left, right, dummy);
+// A helper script for NPC movement in the game.
+depth = -y;
+// Updates depth based on y position of the sprite's origin.
 
-// This if function should allow for a timer.
-if (t > delay * 60) {
-    var dir = irandom_range(0, 3);
-    // Gets which move it will take next.
+// Sprite image names.
+var up = argument0;
+var down = argument1;
+var left = argument2;
+var right = argument3;
+var dummy = argument4;
+
+var imageSpeed = 0.10;
+
+switch (dir) {
+    case 0: // Up
+    {
+        sprite_index = up;
+        image_speed = imageSpeed;
+        y -= 1;
+        
+        break;
+    }
     
-    switch (dir) {
-        case 0: // Up.
-        {
-            sprite_index = spr_mom_u;
-            image_speed = imgspd;
-            
-            t = 0;
+    case 1: // Down
+    {
+        sprite_index = down;
+        image_speed = imageSpeed;
+        y += 1;
         
-            while (t < moveTime * 60) {
-                y -= 0.05;
-                show_message(t);
-                
-                t++;
-            }
-            
-            image_speed = 0;
-            t = 0;
-            break;
-        }
+        break;
+    }
+    
+    case 2: // Left
+    {
+        sprite_index = left;
+        image_speed = imageSpeed;
+        x -= 1;
         
-        case 1: // Down.
-        {
-            sprite_index = spr_mom_d;
-            image_speed = imgspd;
-            
-            for (m = 0; m < moveTime * 60; m++) {
-                y += 0.05;
-            }
-            
-            image_speed = 0;
-            t = 0;
-            break;
-        }
+        break;
+    }
+    
+    case 3: // Right
+    {
+        sprite_index = right;
+        image_speed = imageSpeed;
+        x += 1;
         
-        case 2: // Left.
-        {
-            sprite_index = spr_mom_l;
-            image_speed = imgspd;
-        
-            for (m = 0; m < moveTime * 60; m++) {
-                x -= 0.05;
-            }
-            
-            image_speed = 0;
-            t = 0;
-            break;
-        }
-        
-        case 3: // Right.
-        {
-            sprite_index = spr_mom_u;
-            image_speed = imgspd;
-        
-            for (m = 0; m < moveTime * 60; m++) {
-                x += 0.05;
-            }
-            
-            image_speed = 0;
-            t = 0;
-            break;
-        }
+        break;
     }
 }
+
+dummyObj = instance_create(x, y, dummy);
