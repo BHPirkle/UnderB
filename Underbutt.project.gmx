@@ -104,6 +104,7 @@
       <object>objects\obj_dialogue</object>
       <object>objects\obj_timekeeper</object>
       <object>objects\obj_menu</object>
+      <object>objects\object22</object>
     </objects>
     <objects name="Warps">
       <objects name="Grillbz">

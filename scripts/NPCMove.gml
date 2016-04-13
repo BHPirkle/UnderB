@@ -12,6 +12,39 @@ var dummy = argument4;
 
 var imageSpeed = 0.10;
 
+// Faces the NPC towards the player.
+if (obj_player.listening) {
+    switch (obj_player.facing) {
+        case 0: // Up
+        {
+            sprite_index = down;
+            
+            break;
+        }
+        
+        case 1: // Down
+        {
+            sprite_index = up;
+            
+            break;
+        }
+        
+        case 2: // Left
+        {
+            sprite_index = right;
+            
+            break;
+        }
+        
+        case 3: // Right
+        {
+            sprite_index = left;
+            
+            break;
+        }
+    }
+}
+
 switch (dir) {
     case 0: // Up
     {
@@ -50,4 +83,5 @@ switch (dir) {
     }
 }
 
-dummyObj = instance_create(x, y, dummy);
+dummy.x = x;
+dummy.y = y;

@@ -30,6 +30,7 @@ lyingDown = false;
 listening = false;
 debugKeys = false;
 image_speed = 0;
+facing = 0;
 
 if (room_get_name(obj_player.room) == "rm_fallen") {
     lyingDown = true;
@@ -91,6 +92,7 @@ if (!listening) {
           <argument>
             <kind>1</kind>
             <string>/// Magic Anti-Eraser.
+TestScript();
 </string>
           </argument>
         </arguments>

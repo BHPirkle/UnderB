@@ -11,9 +11,9 @@ if (instance_exists(obj_dialogue)) {
         with (obj_dialogue) {
             instance_destroy();
         }
+        
+        readThrough = true;
     }
-    
-    readThrough = true;
 }
 
 // Checks for creation.

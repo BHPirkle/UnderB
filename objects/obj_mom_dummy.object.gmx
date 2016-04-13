@@ -29,9 +29,8 @@
 TextBoxCheck();
 
 if (textCreate) {
-    message[1] = "\0* Oh, dear. Are you one of Ness's friends?";
-    message[2] = "\0* He's a bit under the weather, but you can go see him.";
-    message[3] = "\0* He's right upstairs, lying in his bed.";
+    message[1] = "\0* Oh, are you one of Ness's friends?";
+    message[2] = "\0* He said he was waiting for someone upstairs...";
     
     TextBox(message, "none", sfx_ebtext, fnt_8bit);
     obj_mom.talking = true;

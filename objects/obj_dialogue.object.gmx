@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>message_current = 0;
+            <string>/// Initiates variables.
+message_current = 0;
+message_end = 0;
 timer = 0;
 cutoff = 0;
 portrait = "none";
@@ -66,35 +68,13 @@ display_set_gui_size(640, 480);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (string_char_at(message[message_current], i) != " " and cutoff &lt; string_length(message[message_current])) 
+            <string>/// Plays sounds.
+if (string_char_at(message[message_current], i) != " " and cutoff &lt; string_length(message[message_current])) 
 { 
     audio_play_sound(sound, 1, false); 
 }
 
 alarm[0] = 6;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>get_input();
 </string>
           </argument>
         </arguments>
@@ -157,7 +137,8 @@ draw_rectangle
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>get_input();
+            <string>/// Draws the text.
+get_input();
 
 draw_set_font(font);
 draw_set_colour(c_white);

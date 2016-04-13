@@ -8,6 +8,7 @@ if (!listening) {
     if (up) {
         if (!earthbound) {
             sprite_index = spr_player_u;
+            facing = 0;
         } else {
             sprite_index = spr_ebplayer_u;
         }
@@ -19,6 +20,7 @@ if (!listening) {
     if (down) {
         if (!earthbound) {
             sprite_index = spr_player_d;
+            facing = 1;
         } else {
             sprite_index = spr_ebplayer_d;
         }
@@ -30,6 +32,7 @@ if (!listening) {
     if (left) {
         if (!earthbound) {
             sprite_index = spr_player_l;
+            facing = 2;
         } else {
             sprite_index = spr_ebplayer_l;
         }
@@ -41,6 +44,7 @@ if (!listening) {
     if (right) {
         if (!earthbound) {
             sprite_index = spr_player_r;
+            facing = 3;
         } else {
             sprite_index = spr_ebplayer_r;
         }

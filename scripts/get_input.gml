@@ -1,4 +1,3 @@
-#define get_input
 /// get_input();
 // Gets the input for movement.
 
@@ -14,18 +13,16 @@ fullscreen = keyboard_check_released(vk_f4); // Fullscreen key.
 keyboard_set_map(fullscreen, ord("F")); // Maps the fullscreen key to F(ullscreen).
 
 // Debug controls, enable by pressing three different keys at the same time.
-
 four = keyboard_check(ord("4"));
 two = keyboard_check(ord("2"));
 zero = keyboard_check(ord("0"));
 
 // Enable during release. (4 + 2 + 0 = Debug mode.)
-
 if (instance_exists(obj_player)) {
     if (four and two and zero) {
         obj_player.debugKeys = true;
     }
-    
+
     if (obj_player.debugKeys) {
         nextRoom = keyboard_check_released(vk_numpad6); // Next room key.
         previousRoom = keyboard_check_released(vk_numpad4); // Previous room key.
@@ -34,5 +31,3 @@ if (instance_exists(obj_player)) {
         showMisc = keyboard_check_released(ord("M")); // Key that shows random things.
     }
 }
-
-#define script3

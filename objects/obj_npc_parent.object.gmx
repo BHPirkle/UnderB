@@ -56,7 +56,7 @@ image_speed = 0;
 image_index = 0;
 dir = -1;
 
-if (!talking) {
+if (!obj_player.listening) {
     alarm[0] = irandom_range(60, 300);
 }
 </string>
@@ -83,7 +83,7 @@ if (!talking) {
             <kind>1</kind>
             <string>/// Magic Anti-Eraser
 
-if (!talking) {
+if (!obj_player.listening) {
     dir = irandom_range(0, 3);
     alarm[1] = 30;
 }

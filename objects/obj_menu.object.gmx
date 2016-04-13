@@ -161,6 +161,43 @@ if (keyboard_check_released(vk_enter)) {
         }
     }
 }
+
+// Defaults all colors to white.
+color[0] = c_white;
+color[1] = c_white;
+color[2] = c_white;
+color[3] = c_white;
+
+// Changes the selection to yellow.
+switch (selection) {
+    case 0:
+    {
+        color[0] = c_yellow;
+        
+        break;
+    }
+    
+    case 1:
+    {
+        color[1] = c_yellow;
+        
+        break;
+    }
+    
+    case 2:
+    {
+        color[2] = c_yellow;
+        
+        break;
+    }
+    
+    case 3:
+    {
+        color[3] = c_yellow;
+        
+        break;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -184,12 +221,19 @@ if (keyboard_check_released(vk_enter)) {
           <argument>
             <kind>1</kind>
             <string>/// Draws the text.
-draw_set_color(c_white);
 draw_set_font(fnt_8bit);
 draw_set_halign(fa_left);
+
+draw_set_color(color[0]);
 draw_text(x, y, option[0]);
+
+draw_set_color(color[1]);
 draw_text(x, y + 40, option[1]);
+
+draw_set_color(color[2]);
 draw_text(x, y + 80, option[2]);
+
+draw_set_color(color[3]);
 draw_text(x, y + 120, option[3]);
 </string>
           </argument>
