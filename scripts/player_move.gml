@@ -2,7 +2,7 @@
 // Allows player movement (revise later to add physics, possibly?).
 get_input();
 
-imgspd = 0.10;
+imgspd = 0.20;
 
 if (!listening) {
     if (up) {
@@ -14,7 +14,7 @@ if (!listening) {
         }
         
         image_speed = imgspd;
-        y -= 1;
+        y -= 2;
     }
     
     if (down) {
@@ -26,7 +26,7 @@ if (!listening) {
         }
          
         image_speed = imgspd;
-        y += 1;
+        y += 2;
     }
     
     if (left) {
@@ -38,7 +38,7 @@ if (!listening) {
         }
         
         image_speed = imgspd;
-        x -= 1;
+        x -= 2;
     }
     
     if (right) {
@@ -50,7 +50,7 @@ if (!listening) {
         }
         
         image_speed = imgspd;
-        x += 1;
+        x += 2;
     }
     
     if (earthbound) {

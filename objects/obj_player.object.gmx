@@ -92,7 +92,6 @@ if (!listening) {
           <argument>
             <kind>1</kind>
             <string>/// Magic Anti-Eraser.
-TestScript();
 </string>
           </argument>
         </arguments>

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Initializes a few variables and an array.
 selection = 0;
+global.username = "";
 
 option[0] = "New Game";
 option[1] = "Continue";

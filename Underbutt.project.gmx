@@ -89,6 +89,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_sans</font>
     <font>fonts\fnt_8bit</font>
+    <font>fonts\fnt_8bit_xl</font>
   </fonts>
   <objects name="objects">
     <objects name="General">
@@ -104,7 +105,8 @@
       <object>objects\obj_dialogue</object>
       <object>objects\obj_timekeeper</object>
       <object>objects\obj_menu</object>
-      <object>objects\object22</object>
+      <object>objects\obj_nameStorage</object>
+      <object>objects\obj_nameInput</object>
     </objects>
     <objects name="Warps">
       <objects name="Grillbz">
