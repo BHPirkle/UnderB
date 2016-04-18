@@ -7,7 +7,6 @@
   <sounds name="sound">
     <sound>sound\sfx_sans</sound>
     <sound>sound\sfx_asriel</sound>
-    <sound>sound\sfx_type</sound>
     <sound>sound\sfx_typewriter</sound>
     <sound>sound\mus_muscle</sound>
     <sound>sound\mus_muscle_slow</sound>
@@ -21,6 +20,7 @@
     <sound>sound\sfx_reflect</sound>
     <sound>sound\sfx_cycle</sound>
     <sound>sound\sfx_select</sound>
+    <sound>sound\sfx_text</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -85,6 +85,7 @@
     <script>scripts\TextBox.gml</script>
     <script>scripts\InitGame.gml</script>
     <script>scripts\NPCMove.gml</script>
+    <script>scripts\Fade.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_sans</font>
@@ -107,6 +108,7 @@
       <object>objects\obj_menu</object>
       <object>objects\obj_nameStorage</object>
       <object>objects\obj_nameInput</object>
+      <object>objects\obj_fade</object>
     </objects>
     <objects name="Warps">
       <objects name="Grillbz">
@@ -131,10 +133,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_name</room>
+    <room>rooms\rm_intro</room>
     <room>rooms\rm_grillbys_abandoned</room>
     <room>rooms\rm_ness_livingroom</room>
     <room>rooms\rm_ness_hallway</room>
-    <room>rooms\rm_ness_herroom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

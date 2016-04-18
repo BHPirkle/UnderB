@@ -1,7 +1,9 @@
 /// TextBox(messageArray, portrait, sound, font);
 // All text box things here and in the object are mainly derived from Diestware's "Advanced Dialogue Box Tutorial."
 // That makes most of this not mine, so I do not claim any of it.
-obj_player.listening = true;
+if (instance_exists(obj_player)) {
+    obj_player.listening = true;
+}
 
 var sent = argument0;
 var portrait = argument1;

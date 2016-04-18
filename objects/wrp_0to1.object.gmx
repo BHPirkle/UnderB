@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>room_goto(rm_ness_livingroom);
+Fade("out");
 audio_play_sound(sfx_doorclose, 1, false);
 </string>
           </argument>

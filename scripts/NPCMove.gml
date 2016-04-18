@@ -10,7 +10,7 @@ var left = argument2;
 var right = argument3;
 var dummy = argument4;
 
-var imageSpeed = 0.10;
+var imageSpeed = 0.20;
 
 // Faces the NPC towards the player.
 if (obj_player.listening) {

@@ -6,7 +6,7 @@ imgspd = 0.20;
 
 if (!listening) {
     if (up) {
-        if (!earthbound) {
+        if (!global.earthbound) {
             sprite_index = spr_player_u;
             facing = 0;
         } else {
@@ -17,8 +17,12 @@ if (!listening) {
         y -= 2;
     }
     
+    if (keyboard_check_released(ord("F"))) {
+        Fade("out");
+    }
+    
     if (down) {
-        if (!earthbound) {
+        if (!global.earthbound) {
             sprite_index = spr_player_d;
             facing = 1;
         } else {
@@ -30,7 +34,7 @@ if (!listening) {
     }
     
     if (left) {
-        if (!earthbound) {
+        if (!global.earthbound) {
             sprite_index = spr_player_l;
             facing = 2;
         } else {
@@ -42,7 +46,7 @@ if (!listening) {
     }
     
     if (right) {
-        if (!earthbound) {
+        if (!global.earthbound) {
             sprite_index = spr_player_r;
             facing = 3;
         } else {
@@ -53,7 +57,7 @@ if (!listening) {
         x += 2;
     }
     
-    if (earthbound) {
+    if (global.earthbound) {
         if (up and left) {
             sprite_index = spr_ebplayer_tl;
         }

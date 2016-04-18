@@ -31,9 +31,9 @@ message_end = 0;
 timer = 0;
 cutoff = 0;
 portrait = "none";
-sound = sfx_type;
+sound = sfx_text;
 font = fnt_8bit;
-alarm[0] = 2;
+alarm[0] = 1;
 
 i = 0;
 currentChar = 0;
@@ -74,7 +74,7 @@ if (string_char_at(message[message_current], i) != " " and cutoff &lt; string_le
     audio_play_sound(sound, 1, false); 
 }
 
-alarm[0] = 4;
+alarm[0] = 3;
 </string>
           </argument>
         </arguments>
@@ -99,24 +99,26 @@ alarm[0] = 4;
             <kind>1</kind>
             <string>/// Draws the actual box.
 
-// Draws the box.
-draw_set_color(c_white);
-draw_rectangle
-(   
-    32, 320, 
-    608, 470, 
-    false
-);
-// Text box outline.
+{
+    // Draws the box.
+    draw_set_color(c_white);
+    draw_rectangle
+    (   
+        32, 320, 
+        608, 470, 
+        false
+    );
+    // Text box outline.
         
-draw_set_color(c_black);
-draw_rectangle
-(
-    38, 326, 
-    602, 464, 
-    false
-);
-// Actual text box.
+    draw_set_color(c_black);
+    draw_rectangle
+    (
+        38, 326, 
+        602, 464, 
+        false
+    );
+    // Actual text box.
+}
 </string>
           </argument>
         </arguments>
@@ -168,7 +170,7 @@ if (message_end &gt; 0) {
     var line = 0;
     var space = 0;
     var i = 1;
-    var delay = 0.5;
+    delay = 0.1;
     
     // Text position.
     var tY = 340;

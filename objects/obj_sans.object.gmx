@@ -148,7 +148,7 @@ TextBoxCheck();
 if (textCreate and dialog == 3) {
     message3[1] = "\0* (It seems he refuses to help you.)";
     
-    TextBox(message3, "none", sfx_type, fnt_8bit);
+    TextBox(message3, "none", sfx_text, fnt_8bit);
 }
 
 if (textCreate and dialog == 2) {
