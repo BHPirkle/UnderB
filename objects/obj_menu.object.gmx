@@ -59,8 +59,7 @@ option[3] = "Quit Game";
 switch (selection) {
     case 0: // New Game
     {
-        room_goto(rm_grillbys_abandoned);
-        // Temporary, since saving/loading is not done and no intro yet.
+        room_goto(rm_name);
         
         break;
     }

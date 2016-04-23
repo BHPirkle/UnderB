@@ -58,6 +58,7 @@ for (var i = 97; i &lt; 123; i++) {
 }
 
 display_set_gui_size(640, 480);
+global.username = "";
 </string>
           </argument>
         </arguments>
@@ -81,23 +82,104 @@ display_set_gui_size(640, 480);
           <argument>
             <kind>1</kind>
             <string>/// Draws the (hopefully temporary) cursor.
-get_input();
-
-/*
-if (menu == 0) {
-    draw_sprite(spr_cursor, 0, x + (horz * 25), y + (vert * 17));
+if (menu == 2) {
+    if (horz == 0) draw_sprite(spr_tempcursor, 0, 100, 410);
+    if (horz == 1) draw_sprite(spr_tempcursor, 0, 218, 410);
+    if (horz == 2) draw_sprite(spr_tempcursor, 0, 418, 410);
     
-    if (left) horz--;
-    if (right) horz++;
+    if (keyboard_check_pressed(vk_left)) horz--;
+    if (keyboard_check_pressed(vk_right)) horz++;
+    if (horz &lt; 0) horz = 2;
+    if (horz &gt; 2) horz = 0;
+    
+    if (keyboard_check_pressed(vk_up)) {menu = 1; vert = 3; horz = 4;}
+}
+if (menu == 1) {
+    draw_sprite(spr_tempcursor, 0, 120 + (horz * 64) + irandom_range(0, 1), 280 + (vert * 28) + irandom_range(0, 1));
+    
+    if (keyboard_check_pressed(vk_left)) horz--;
+    if (keyboard_check_pressed(vk_right)) horz++;
     if (horz &lt; 0) horz = 6;
     if (horz &gt; 6) horz = 0;
     
-    if (up) vert--;
-    if (down) vert++;
+    if (keyboard_check_pressed(vk_up)) vert--;
+    if (keyboard_check_pressed(vk_down)) vert++;
     
-    // Continue later... need to think on this a bit more.
+    if (horz &lt;= 7 &amp;&amp; horz &gt;= 0)
+    {
+        if (vert &gt; 3) {menu = 2; vert = 0; horz = 1;}
+        if (vert &lt; 0) {menu = 0; vert = 3;}
+    }
+    
+    if (vert == 3) {
+        if (horz &gt; 4) {horz = 0;}
+    }
 }
-*/
+if (menu == 0) {
+    draw_sprite(spr_tempcursor, 0, 118 + (horz * 64) + irandom_range(0, 1), 160 + (vert * 28) + irandom_range(0, 1));
+    
+    if (keyboard_check_pressed(vk_left)) horz--;
+    if (keyboard_check_pressed(vk_right)) horz++;
+    if (horz &lt; 0) horz = 6;
+    if (horz &gt; 6) horz = 0;
+    
+    if (keyboard_check_pressed(vk_up)) vert--;
+    if (keyboard_check_pressed(vk_down)) vert++;
+    
+    if (horz &lt;= 7 &amp;&amp; horz &gt;= 0)
+    {
+        if (vert &gt; 3) {menu = 1; vert = 0;}
+        if (vert &lt; 0) {vert = 0;}
+    }
+    
+    if (vert == 3) {
+        if (horz &gt; 4) {horz = 0;}
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Interact with the menu.
+if (keyboard_check_pressed(vk_enter)) {
+    if (string_length(global.username) &lt; 6) {
+    if (menu == 0) {
+        global.username += characters[horz + (7 * vert)];
+    }
+    
+    if (menu == 1) {
+        global.username += lowercaseCharacters[horz + (7 * vert)];
+    }
+    }
+    
+    if (menu == 2) {
+        if (horz == 0) {global.username = ""; room_goto(rm_menu);}
+        if (horz == 1) global.username = string_copy(global.username, 0, string_length(global.username) - 1);
+        if (horz == 2) {
+            room_goto(rm_confirm);
+        }
+    }
+}
+
+// Draws the name.
+draw_set_halign(fa_left);
+draw_text(278, 114, global.username);
 </string>
           </argument>
         </arguments>

@@ -167,7 +167,7 @@ if (textCreate and dialog == 1) {
 }
 
 if (textCreate and dialog == 0) {
-    message[1] = "\0* heya, human.";
+    message[1] = "\0* heya, kiddo.";
     message[2] = "\0* are you wondering what's down here?";
     message[3] = "\0* what's with the face?";
     message[4] = "\0* do you already know?";

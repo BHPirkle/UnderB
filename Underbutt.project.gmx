@@ -21,6 +21,7 @@
     <sound>sound\sfx_cycle</sound>
     <sound>sound\sfx_select</sound>
     <sound>sound\sfx_text</sound>
+    <sound>sound\mus_menu</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -69,6 +70,7 @@
     <sprite>sprites\spr_livingroom_couch</sprite>
     <sprite>sprites\spr_timekeeper</sprite>
     <sprite>sprites\spr_heart</sprite>
+    <sprite>sprites\spr_tempcursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
@@ -106,9 +108,9 @@
       <object>objects\obj_dialogue</object>
       <object>objects\obj_timekeeper</object>
       <object>objects\obj_menu</object>
-      <object>objects\obj_nameStorage</object>
       <object>objects\obj_nameInput</object>
       <object>objects\obj_fade</object>
+      <object>objects\obj_nameConfirm</object>
     </objects>
     <objects name="Warps">
       <objects name="Grillbz">
@@ -134,10 +136,9 @@
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_name</room>
+    <room>rooms\rm_confirm</room>
     <room>rooms\rm_intro</room>
     <room>rooms\rm_grillbys_abandoned</room>
-    <room>rooms\rm_ness_livingroom</room>
-    <room>rooms\rm_ness_hallway</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
