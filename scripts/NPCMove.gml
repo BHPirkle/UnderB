@@ -1,5 +1,6 @@
 /// NPCMove(up, down, left, right, dummy);
 // A helper script for NPC movement in the game.
+
 depth = -y;
 // Updates depth based on y position of the sprite's origin.
 

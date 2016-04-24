@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Creates dialog.
 
+obj_hole.dialog = 1;
 message[0] = "\W* Hello, " + global.username + ".";
 message[1] = "\W* I am broadcasting to your mind as I believe you are the one.";
 message[2] = "\W* I am dying.";

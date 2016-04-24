@@ -28,6 +28,7 @@
             <string>/// Initializes a variable.
 selection = 0;
 ask = "Is this name correct?";
+global.username = "AAAAAA";
 if (global.username = "AAAAAA") ask = "Not very creative...?";
 if (global.username = "sans") ask = "sure.";
 if (global.username = "brando") ask = "faggot";
@@ -61,7 +62,7 @@ customY = 118;
             <string>/// Adds to the scale.
 if (scale != 4.18 and customY != 277) {
     scale += 0.02;
-    customX -= 1;
+    customX -= 0.1;
     customY += 1;
 }
 
