@@ -5,10 +5,10 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_object_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,39 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Dialog.
-TextBoxCheck();
+            <string>/// Stores dialog stuff.
+message[1] = "\W* Welcome to the underground! \N \W* Pine Town is just up ahead, please enjoy your stay!";
+//message[2] = "\W* Please enjoy your stay!";
 
-if (textCreate) {
-    message[1] = "\W* Welcome to the underground!";
-    message[2] = "\W* Pine Town is just up ahead.";
-    message[3] = "\W* Please enjoy your stay!";
-    
-    TextBox(message, "none", sfx_desc, fnt_8bit);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_player">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Magic Anti-Eraser.
+event_inherited();
 </string>
           </argument>
         </arguments>

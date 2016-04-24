@@ -19,6 +19,6 @@ if (instance_exists(obj_dialogue)) {
 }
 
 // Checks for creation.
-if (interact and distance_to_object(obj_player) < 5 and obj_player.listening == false and !instance_exists(obj_dialogue) and readThrough == false) {
+if (interact and distance_to_object(obj_player) < 5 and obj_player.listening == false and !instance_exists(obj_dialogue) and !readThrough) {
     textCreate = true;
 }

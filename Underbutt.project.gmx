@@ -8,6 +8,9 @@
     <sounds name="Music">
       <sound>sound\mus_menu</sound>
     </sounds>
+    <sounds name="Ambience">
+      <sound>sound\amb_birds</sound>
+    </sounds>
     <sounds name="Text Sounds">
       <sound>sound\sfx_sans</sound>
       <sound>sound\sfx_text</sound>
@@ -41,6 +44,8 @@
     </sprites>
     <sprite>sprites\spr_black</sprite>
     <sprite>sprites\spr_desc</sprite>
+    <sprite>sprites\spr_leftslantdesc</sprite>
+    <sprite>sprites\spr_rightslantdesc</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_npc_collision</sprite>
     <sprite>sprites\spr_leftslantcollision</sprite>
@@ -48,13 +53,16 @@
     <sprite>sprites\spr_warp</sprite>
     <sprite>sprites\spr_sans</sprite>
     <sprite>sprites\spr_heart</sprite>
-    <sprite>sprites\spr_tempcursor</sprite>
+    <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_sign0</sprite>
+    <sprite>sprites\spr_sphouse</sprite>
+    <sprite>sprites\spr_pinetree</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
     <background>background\bg_deep</background>
     <background>background\bg_pineforest</background>
+    <background>background\bg_sphome</background>
     <background>background\fg_dark</background>
   </backgrounds>
   <paths name="paths"/>
@@ -76,6 +84,7 @@
       <object>objects\obj_player</object>
       <object>objects\obj_npc_parent</object>
       <object>objects\obj_warp_parent</object>
+      <object>objects\obj_object_parent</object>
       <object>objects\obj_mom</object>
       <object>objects\obj_mom_dummy</object>
       <objects name="Collisions">
@@ -103,9 +112,12 @@
       <objects name="Deep">
         <object>objects\warp_0to1</object>
       </objects>
-    </objects>
-    <objects name="Grillbz">
-      <object>objects\obj_sans</object>
+      <objects name="Pine Forest">
+        <object>objects\warp_1to2</object>
+      </objects>
+      <objects name="SP Home">
+        <object>objects\warp_2to1</object>
+      </objects>
     </objects>
     <objects name="Deep">
       <object>objects\obj_hole</object>
@@ -113,17 +125,27 @@
     </objects>
     <objects name="Pine Forest">
       <object>objects\obj_sign0</object>
+      <object>objects\obj_bigdoor</object>
       <object>objects\obj_sign0_spr</object>
+    </objects>
+    <objects name="SP Home">
+      <object>objects\obj_sphouse</object>
+      <object>objects\obj_pinetree</object>
+      <object>objects\obj_tempdoor</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_pineforest</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_name</room>
     <room>rooms\rm_confirm</room>
     <room>rooms\rm_deep</room>
-    <room>rooms\rm_grillbys_abandoned</room>
+    <room>rooms\rm_pineforest</room>
+    <room>rooms\rm_sphome</room>
   </rooms>
+  <constants number="2">
+    <constant name="FACING">global.dir</constant>
+    <constant name="NAME">global.username</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

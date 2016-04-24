@@ -26,17 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// Intializes a few variables.
-lyingDown = false;
 listening = false;
-debugKeys = false;
 image_speed = 0;
 facing = 0;
 
-if (room_get_name(obj_player.room) == "rm_fallen") {
-    lyingDown = true;
-}
-
-global.earthbound = false;
+if (FACING = 0) sprite_index = spr_player_u;
+if (FACING = 1) sprite_index = spr_player_d;
+if (FACING = 2) sprite_index = spr_player_l;
+if (FACING = 3) sprite_index = spr_player_r;
 </string>
           </argument>
         </arguments>

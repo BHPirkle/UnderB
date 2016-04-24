@@ -53,6 +53,7 @@ doneAlready = false;
             <kind>1</kind>
             <string>/// Warps.
 room_goto(nextRoom);
+doneAlready = false;
 </string>
           </argument>
         </arguments>

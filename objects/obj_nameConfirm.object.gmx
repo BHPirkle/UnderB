@@ -28,7 +28,6 @@
             <string>/// Initializes a variable.
 selection = 0;
 ask = "Is this name correct?";
-global.username = "AAAAAA";
 if (global.username = "AAAAAA") ask = "Not very creative...?";
 if (global.username = "sans") ask = "sure.";
 if (global.username = "brando") ask = "faggot";

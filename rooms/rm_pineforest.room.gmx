@@ -10,7 +10,8 @@
   <persistent>-1</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>audio_stop_all();</code>
+  <code>audio_stop_all();
+audio_play_sound(amb_birds, 0, true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -58,8 +59,10 @@
     <instance objName="obj_leftslantcollision" x="35" y="132" name="inst_77EAD5AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_leftslantcollision" x="10" y="156" name="inst_6F9F78DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="-1" y="188" name="inst_157805EE" locked="0" code="" scaleX="0.387096762657166" scaleY="1.34375" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sign0" x="275" y="151" name="inst_FDAAFCA1" locked="0" code="" scaleX="0.806451618671417" scaleY="0.322580635547638" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sign0" x="282" y="151" name="inst_FDAAFCA1" locked="0" code="" scaleX="0.387096762657166" scaleY="0.322580635547638" colour="4294967295" rotation="0"/>
     <instance objName="obj_sign0_spr" x="277" y="141" name="inst_721D2418" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bigdoor" x="27" y="139" name="inst_C7065B26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="warp_1to2" x="634" y="139" name="inst_9B475A4B" locked="0" code="" scaleX="0.25" scaleY="2.87096762657166" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

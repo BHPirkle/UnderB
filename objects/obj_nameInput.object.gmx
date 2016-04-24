@@ -83,9 +83,9 @@ global.username = "";
             <kind>1</kind>
             <string>/// Draws the (hopefully temporary) cursor.
 if (menu == 2) {
-    if (horz == 0) draw_sprite(spr_tempcursor, 0, 100, 410);
-    if (horz == 1) draw_sprite(spr_tempcursor, 0, 218, 410);
-    if (horz == 2) draw_sprite(spr_tempcursor, 0, 418, 410);
+    if (horz == 0) draw_sprite(spr_cursor, 1, 100, 410);
+    if (horz == 1) draw_sprite(spr_cursor, 1, 218, 410);
+    if (horz == 2) draw_sprite(spr_cursor, 1, 418, 410);
     
     if (keyboard_check_pressed(vk_left)) horz--;
     if (keyboard_check_pressed(vk_right)) horz++;
@@ -95,7 +95,7 @@ if (menu == 2) {
     if (keyboard_check_pressed(vk_up)) {menu = 1; vert = 3; horz = 4;}
 }
 if (menu == 1) {
-    draw_sprite(spr_tempcursor, 0, 120 + (horz * 64) + irandom_range(0, 1), 280 + (vert * 28) + irandom_range(0, 1));
+    draw_sprite(spr_cursor, 0, 120 + (horz * 64) + irandom_range(0, 1), 280 + (vert * 28) + irandom_range(0, 1));
     
     if (keyboard_check_pressed(vk_left)) horz--;
     if (keyboard_check_pressed(vk_right)) horz++;
@@ -116,7 +116,7 @@ if (menu == 1) {
     }
 }
 if (menu == 0) {
-    draw_sprite(spr_tempcursor, 0, 118 + (horz * 64) + irandom_range(0, 1), 160 + (vert * 28) + irandom_range(0, 1));
+    draw_sprite(spr_cursor, 0, 118 + (horz * 64) + irandom_range(0, 1), 160 + (vert * 28) + irandom_range(0, 1));
     
     if (keyboard_check_pressed(vk_left)) horz--;
     if (keyboard_check_pressed(vk_right)) horz++;
@@ -157,6 +157,8 @@ if (menu == 0) {
           <argument>
             <kind>1</kind>
             <string>/// Interact with the menu.
+GetInput();
+
 if (keyboard_check_pressed(vk_enter)) {
     if (string_length(global.username) &lt; 6) {
     if (menu == 0) {
@@ -176,6 +178,8 @@ if (keyboard_check_pressed(vk_enter)) {
         }
     }
 }
+
+if (back) global.username = string_copy(global.username, 0, string_length(global.username) - 1);
 
 // Draws the name.
 draw_set_halign(fa_left);

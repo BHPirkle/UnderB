@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Initializes a few variables and an array.
 selection = 0;
+global.dir = 0;
 
 option[0] = "New Game";
 option[1] = "Continue";
@@ -58,8 +59,8 @@ option[3] = "Quit Game";
 switch (selection) {
     case 0: // New Game
     {
-        room_goto(rm_name);
-        //room_goto(rm_deep);
+        //room_goto(rm_name);
+        room_goto(rm_sphome);
         
         break;
     }
