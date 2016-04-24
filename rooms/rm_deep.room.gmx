@@ -10,7 +10,7 @@
   <persistent>-1</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>audio_stop_all();</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -31,8 +31,8 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="-1" name="&lt;undefined&gt;" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_deep" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="-1" name="fg_dark" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -51,7 +51,14 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_nameConfirm" x="0" y="0" name="inst_CE4CE8F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="96" y="192" name="inst_2D6EB293" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="5" y="122" name="inst_F4AB6451" locked="0" code="" scaleX="1" scaleY="3.94000005722046" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="38" y="83" name="inst_B2DBF2F0" locked="0" code="" scaleX="8.83870983123779" scaleY="1.03225803375244" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="318" y="110" name="inst_8C04EAFC" locked="0" code="" scaleX="0.100000001490116" scaleY="1.15625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="11" y="96" name="inst_29017DE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="33" y="237" name="inst_578CAC27" locked="0" code="" scaleX="3.90625" scaleY="0.100000001490116" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hole" x="158" y="148" name="inst_36EE37ED" locked="0" code="" scaleX="5.13000011444092" scaleY="2.9375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deepGuy" x="222" y="116" name="inst_CB5EF2F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

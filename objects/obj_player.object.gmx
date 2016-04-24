@@ -63,9 +63,9 @@ global.earthbound = false;
 depth = -y;
 
 if (!listening) {
-    player_move();
+    PlayerMove();
 } else {
-    player_move();
+    PlayerMove();
     image_speed = 0;
     image_index = 0;
 }

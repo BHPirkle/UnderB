@@ -5,23 +5,19 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sfx_sans</sound>
-    <sound>sound\sfx_asriel</sound>
-    <sound>sound\sfx_typewriter</sound>
-    <sound>sound\mus_muscle</sound>
-    <sound>sound\mus_muscle_slow</sound>
-    <sound>sound\mus_flowey_slow</sound>
-    <sound>sound\sfx_asgore</sound>
-    <sound>sound\mus_homesweethome</sound>
-    <sound>sound\sfx_dooropen</sound>
-    <sound>sound\sfx_doorclose</sound>
-    <sound>sound\sfx_ebtext</sound>
-    <sound>sound\sfx_steps</sound>
-    <sound>sound\sfx_reflect</sound>
-    <sound>sound\sfx_cycle</sound>
-    <sound>sound\sfx_select</sound>
-    <sound>sound\sfx_text</sound>
-    <sound>sound\mus_menu</sound>
+    <sounds name="Music">
+      <sound>sound\mus_menu</sound>
+    </sounds>
+    <sounds name="Text Sounds">
+      <sound>sound\sfx_sans</sound>
+      <sound>sound\sfx_text</sound>
+      <sound>sound\sfx_desc</sound>
+      <sound>sound\sfx_whisper</sound>
+    </sounds>
+    <sounds name="Misc. Sounds">
+      <sound>sound\sfx_cycle</sound>
+      <sound>sound\sfx_select</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -56,13 +52,12 @@
       <sprite>sprites\spr_object</sprite>
     </sprites>
     <sprite>sprites\spr_fade</sprite>
-    <sprite>sprites\spr_firstwarp</sprite>
+    <sprite>sprites\spr_desc</sprite>
     <sprite>sprites\spr_black</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_npc_collision</sprite>
     <sprite>sprites\spr_leftslantcollision</sprite>
     <sprite>sprites\spr_rightslantcollision</sprite>
-    <sprite>sprites\spr_sanscollison</sprite>
     <sprite>sprites\spr_sans</sprite>
     <sprite>sprites\spr_portrait</sprite>
     <sprite>sprites\spr_livingroom_chair</sprite>
@@ -74,31 +69,27 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
-    <background>background\bg_ness_livingroom</background>
-    <background>background\bg_ness_hallway</background>
-    <background>background\bg_ness_herroom</background>
-    <background>background\bg_ness_reflection</background>
+    <background>background\bg_deep</background>
+    <background>background\fg_dark</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\get_input.gml</script>
-    <script>scripts\player_move.gml</script>
+    <script>scripts\InitGame.gml</script>
+    <script>scripts\GetInput.gml</script>
+    <script>scripts\PlayerMove.gml</script>
     <script>scripts\TextBoxCheck.gml</script>
     <script>scripts\TextBox.gml</script>
-    <script>scripts\InitGame.gml</script>
     <script>scripts\NPCMove.gml</script>
     <script>scripts\Fade.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_sans</font>
     <font>fonts\fnt_8bit</font>
-    <font>fonts\fnt_8bit_xl</font>
   </fonts>
   <objects name="objects">
     <objects name="General">
       <object>objects\obj_player</object>
       <object>objects\obj_npc_parent</object>
-      <object>objects\obj_graydoor</object>
       <object>objects\obj_collision</object>
       <object>objects\obj_npc_collision</object>
       <object>objects\obj_leftslantcollision</object>
@@ -111,33 +102,27 @@
       <object>objects\obj_nameInput</object>
       <object>objects\obj_fade</object>
       <object>objects\obj_nameConfirm</object>
+      <object>objects\obj_mom</object>
+      <object>objects\obj_mom_dummy</object>
     </objects>
     <objects name="Warps">
-      <objects name="Grillbz">
-        <object>objects\wrp_0to1</object>
-      </objects>
-      <objects name="Ness">
-        <object>objects\wrp_1to2</object>
-        <object>objects\wrp_2to1</object>
-        <object>objects\wrp_2to3</object>
+      <objects name="Deep">
+        <object>objects\evnt_0</object>
       </objects>
     </objects>
     <objects name="Grillbz">
       <object>objects\obj_sans</object>
     </objects>
-    <objects name="Ness">
-      <object>objects\obj_livingroom_chair</object>
-      <object>objects\obj_livingroom_table</object>
-      <object>objects\obj_livingroom_couch</object>
-      <object>objects\obj_mom</object>
-      <object>objects\obj_mom_dummy</object>
+    <objects name="Deep">
+      <object>objects\obj_hole</object>
+      <object>objects\obj_deepGuy</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
     <room>rooms\rm_name</room>
     <room>rooms\rm_confirm</room>
-    <room>rooms\rm_intro</room>
+    <room>rooms\rm_deep</room>
     <room>rooms\rm_grillbys_abandoned</room>
   </rooms>
   <help>

@@ -74,7 +74,8 @@ if (string_char_at(message[message_current], i) != " " and cutoff &lt; string_le
     audio_play_sound(sound, 1, false); 
 }
 
-alarm[0] = 3;
+if (sound == sfx_desc) alarm[0] = 2.3;
+if (sound == sfx_whisper) alarm[0] = 3;
 </string>
           </argument>
         </arguments>
@@ -140,7 +141,7 @@ alarm[0] = 3;
           <argument>
             <kind>1</kind>
             <string>/// Draws the text.
-get_input();
+GetInput();
 
 draw_set_font(font);
 draw_set_colour(c_white);
@@ -170,7 +171,7 @@ if (message_end &gt; 0) {
     var line = 0;
     var space = 0;
     var i = 1;
-    delay = 0.1;
+    delay = 0.01;
     
     // Text position.
     var tY = 340;
@@ -209,7 +210,7 @@ if (message_end &gt; 0) {
     while(i &lt;= string_length(message[message_current]) &amp;&amp; i &lt;= cutoff) {
         // Checks for a modifier.
         if (string_char_at(message[message_current], i) == "\") {
-            mod0 = real(string_char_at(message[message_current], ++i));
+            mod0 = string_char_at(message[message_current], ++i);
             ++i;
         }
         
@@ -228,34 +229,34 @@ if (message_end &gt; 0) {
         
         // Text
         switch (mod0) {
-            case 0: // Normal text.
+            case "W": // White text.
             {
                 draw_set_color(c_white);
                 draw_text(tX + (space * charWidth), tY + (13 * line), string_char_at(message[message_current], i));
                 break;  
             }
             
-            case 1: // Sets the color to yellow.
+            case "Y": // Sets the color to yellow.
             {
                 draw_set_color(c_yellow);
                 draw_text(tX + (space * charWidth), tY + (13 * line), string_char_at(message[message_current], i));
                 break;
             }
             
-            case 2: // Sets the color to red.
+            case "R": // Sets the color to red.
             {
                 draw_set_color(c_red);
                 draw_text(tX + (space * charWidth), tY + (13 * line), string_char_at(message[message_current], i));
                 break;
             }
             
-            case 3: // Shaky text.
+            case "S": // Shaky text.
             {
                 draw_text(tX + (space * charWidth) + random_range(-15, 10), tY + (13 * line) + random_range(-10, 15), string_char_at(message[message_current], i));
                 break;    
             }
             
-            case 4: // Next line.
+            case "N": // Next line.
             {
                 space = 1;
                 line += 2.8;
@@ -264,7 +265,7 @@ if (message_end &gt; 0) {
                 break;
             }
             
-            case 5: // Sine movement, which is a wave.
+            case "T": // Sine movement, which is a wave.
             {
                 var so = t + i;
                 var shift = sin(so * pi * freq / room_speed) * amplitude;
@@ -273,7 +274,7 @@ if (message_end &gt; 0) {
                 break;
             }
             
-            case 6: // Gradient, color-changing text.
+            case "G": // Gradient, color-changing text.
             {
                 var col = make_color_hsv(t + i, 255, 255);
                 var col2 = make_color_hsv(t + i + 75, 255, 255);
@@ -281,7 +282,7 @@ if (message_end &gt; 0) {
                 break;
             }
             
-            case 7: // Combination of 5 and 6.
+            case "Z": // Combination of 5 and 6.
             {
                 var so = t + i;
                 var shift = sin(so * pi * freq / room_speed) * amplitude;
