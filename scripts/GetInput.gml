@@ -1,6 +1,6 @@
 /// GetInput();
 // Gets the input for movement.
-debug = true;
+debug = false;
 
 up = keyboard_check(vk_up); // Up arrow key.
 down = keyboard_check(vk_down); // Down arrow key.

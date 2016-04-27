@@ -29,6 +29,7 @@
 nextRoom = "";
 alarmSpeed = 0;
 doneAlready = false;
+canLeave = false;
 </string>
           </argument>
         </arguments>
@@ -54,6 +55,7 @@ doneAlready = false;
             <string>/// Warps.
 room_goto(nextRoom);
 doneAlready = false;
+canLeave = false;
 </string>
           </argument>
         </arguments>
@@ -77,7 +79,8 @@ doneAlready = false;
           <argument>
             <kind>1</kind>
             <string>/// Initiates a warp.
-if (!doneAlready) {
+instance_create(0, 0, obj_fadeOut);
+if (!doneAlready and canLeave) {
     alarm[0] = alarmSpeed;
     
     doneAlready = true;

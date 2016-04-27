@@ -37,7 +37,7 @@ message[5] = "\W* Collect the dankest, rarest pepe.";
 message[6] = "\W* After that is done, bring it to me.";
 message[7] = "\W* I will reward you after I am healthy once again.";
 message[8] = "\W* Goodbye.";
-TextBox(message, "none", sfx_whisper, fnt_8bit);
+TextBox(message, "none", sfx_whisper, fnt_wd);
 
 instance_destroy();
 </string>

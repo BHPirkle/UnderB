@@ -82,6 +82,8 @@ global.username = "";
           <argument>
             <kind>1</kind>
             <string>/// Draws the (hopefully temporary) cursor.
+draw_set_alpha(1);
+
 if (menu == 2) {
     if (horz == 0) draw_sprite(spr_cursor, 1, 100, 410);
     if (horz == 1) draw_sprite(spr_cursor, 1, 218, 410);
@@ -95,7 +97,7 @@ if (menu == 2) {
     if (keyboard_check_pressed(vk_up)) {menu = 1; vert = 3; horz = 4;}
 }
 if (menu == 1) {
-    draw_sprite(spr_cursor, 0, 120 + (horz * 64) + irandom_range(0, 1), 280 + (vert * 28) + irandom_range(0, 1));
+    draw_sprite(spr_cursor, 0, 120 + (horz * 64), 280 + (vert * 28));
     
     if (keyboard_check_pressed(vk_left)) horz--;
     if (keyboard_check_pressed(vk_right)) horz++;
@@ -116,7 +118,7 @@ if (menu == 1) {
     }
 }
 if (menu == 0) {
-    draw_sprite(spr_cursor, 0, 118 + (horz * 64) + irandom_range(0, 1), 160 + (vert * 28) + irandom_range(0, 1));
+    draw_sprite(spr_cursor, 0, 118 + (horz * 64), 160 + (vert * 28));
     
     if (keyboard_check_pressed(vk_left)) horz--;
     if (keyboard_check_pressed(vk_right)) horz++;
@@ -158,6 +160,7 @@ if (menu == 0) {
             <kind>1</kind>
             <string>/// Interact with the menu.
 GetInput();
+draw_set_alpha(1);
 
 if (keyboard_check_pressed(vk_enter)) {
     if (string_length(global.username) &lt; 6) {
@@ -208,6 +211,7 @@ draw_text(278, 114, global.username);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_font(fnt_8bit);
+draw_set_alpha(1);
 
 // Draws sentance above the text.
 draw_text(180, 68, "Name the fallen human.")

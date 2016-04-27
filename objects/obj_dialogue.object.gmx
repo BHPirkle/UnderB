@@ -100,6 +100,7 @@ if (sound == sfx_sans) alarm[0] = 2.3;
           <argument>
             <kind>1</kind>
             <string>/// Draws the actual box.
+draw_set_alpha(1);
 
 {
     // Draws the box.
@@ -146,7 +147,7 @@ GetInput();
 
 draw_set_font(font);
 draw_set_colour(c_white);
-
+draw_set_alpha(1);
 t++;
 
 // How many messages are in the array.
@@ -167,8 +168,21 @@ if (message_end &gt; 0) {
             var charWidth = 16;
             break;
         }
+        
+        case fnt_papy: // Papyrus
+        {
+            var charWidth = 16;
+            break;
+        }
+        
+        case fnt_wd: // Wing Dings
+        {
+            var charWidth = 32;
+            break;
+        }
     }
     var lineEnd = 30;
+    if (font == fnt_wd) var lineEnd = 15;
     var line = 0;
     var space = 0;
     var i = 1;

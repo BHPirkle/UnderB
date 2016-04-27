@@ -10,8 +10,7 @@
   <persistent>-1</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>audio_stop_all();
-audio_play_sound(amb_birds, 0, true);</code>
+  <code>if (!audio_exists(amb_birds)) {audio_stop_all(); audio_play_sound(amb_birds, 0, true);}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

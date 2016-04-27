@@ -30,7 +30,8 @@ selection = 0;
 ask = "Is this name correct?";
 if (global.username = "AAAAAA") ask = "Not very creative...?";
 if (global.username = "sans") ask = "sure.";
-if (global.username = "brando") ask = "faggot";
+if (global.username = "Dalton") ask = "Slightly unoriginal... but okay.";
+if (global.username = "Matthe") ask = "is daym out yet?";
 color[0] = c_white;
 color[1] = c_white;
 scale = 1;
@@ -78,7 +79,14 @@ if (selection == 1) color[1] = c_yellow;
 
 if (keyboard_check_pressed(vk_enter)) {
     if (selection == 0) room_goto(rm_name);
-    if (selection == 1) room_goto(rm_deep);
+    if (selection == 1) {
+        instance_create(0, 0, obj_fadeOut);
+        
+        with (obj_fadeOut) {
+            intro = true;
+            nextRoom = rm_deep;
+        }
+    }
 }
 </string>
           </argument>
@@ -103,6 +111,9 @@ if (keyboard_check_pressed(vk_enter)) {
           <argument>
             <kind>1</kind>
             <string>/// Draws all the text.
+draw_set_alpha(1);
+
+if (!instance_exists(obj_fadeOut)) {
 draw_set_font(fnt_8bit);
 draw_set_halign(fa_left);
 draw_set_color(color[0]);
@@ -112,6 +123,7 @@ draw_text(418, 404, "Yes");
 
 draw_set_color(c_white);
 draw_text(178, 64, ask);
+}
 
 draw_text_transformed(customX, customY, global.username, scale, scale, irandom_range(-1, 1));
 </string>

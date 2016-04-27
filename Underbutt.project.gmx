@@ -10,6 +10,7 @@
     </sounds>
     <sounds name="Ambience">
       <sound>sound\amb_birds</sound>
+      <sound>sound\amb_cymbal</sound>
     </sounds>
     <sounds name="Text Sounds">
       <sound>sound\sfx_sans</sound>
@@ -78,6 +79,9 @@
   <fonts name="fonts">
     <font>fonts\fnt_8bit</font>
     <font>fonts\fnt_sans</font>
+    <font>fonts\fnt_wd</font>
+    <font>fonts\fnt_papy</font>
+    <font>fonts\fnt_small</font>
   </fonts>
   <objects name="objects">
     <objects name="General">
@@ -97,10 +101,13 @@
       <objects name="GUI Stuff">
         <object>objects\obj_camera</object>
         <object>objects\obj_nameInput</object>
+        <object>objects\obj_inputName</object>
         <object>objects\obj_dialogue</object>
         <object>objects\obj_menu</object>
-        <object>objects\obj_fade</object>
         <object>objects\obj_nameConfirm</object>
+        <object>objects\obj_fadeOut</object>
+        <object>objects\obj_fadeIn</object>
+        <object>objects\obj_controlScreen</object>
       </objects>
     </objects>
     <objects name="Events">
@@ -136,6 +143,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_controls</room>
     <room>rooms\rm_name</room>
     <room>rooms\rm_confirm</room>
     <room>rooms\rm_deep</room>
