@@ -64,6 +64,7 @@ audio_play_sound(amb_birds, 0, true);</code>
     <instance objName="obj_bigdoor" x="27" y="139" name="inst_C7065B26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="warp_1to2" x="634" y="139" name="inst_9B475A4B" locked="0" code="" scaleX="0.25" scaleY="2.87096762657166" colour="4294967295" rotation="0"/>
     <instance objName="obj_global" x="0" y="0" name="inst_A927E12A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_save" x="192" y="160" name="inst_644B9C5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

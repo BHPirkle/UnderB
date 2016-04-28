@@ -61,6 +61,7 @@
     <sprite>sprites\spr_closing0</sprite>
     <sprite>sprites\spr_closing1</sprite>
     <sprite>sprites\spr_closing2</sprite>
+    <sprite>sprites\spr_save</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
@@ -89,6 +90,7 @@
   <objects name="objects">
     <objects name="General">
       <object>objects\obj_player</object>
+      <object>objects\obj_save</object>
       <object>objects\obj_global</object>
       <object>objects\obj_npc_parent</object>
       <object>objects\obj_warp_parent</object>

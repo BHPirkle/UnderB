@@ -49,7 +49,8 @@ display_set_gui_size(640, 480);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_ltgray);
+            <string>/// Draws the intruction(s).
+draw_set_color(c_ltgray);
 draw_set_alpha(1);
 draw_set_font(fnt_8bit);
 draw_set_halign(fa_left);
