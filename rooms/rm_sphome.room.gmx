@@ -103,6 +103,8 @@
     <instance objName="obj_pinetree" x="399" y="305" name="inst_FBECF335" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="262" y="172" name="inst_6BA261B4" locked="0" code="" scaleX="5.13000011444092" scaleY="1.78125" colour="4294967295" rotation="0"/>
     <instance objName="obj_tempdoor" x="344" y="193" name="inst_A702F030" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_felled" x="633" y="255" name="inst_022334BC" locked="0" code="" scaleX="0.25" scaleY="7.13000011444092" colour="4294967295" rotation="0"/>
+    <instance objName="obj_global" x="1" y="1" name="inst_C231A870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

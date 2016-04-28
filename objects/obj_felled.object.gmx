@@ -5,10 +5,10 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_object_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_player">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,21 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Creates dialog.
+            <string>/// Dialog.
+message[1] = "\W* (Felled trees block your way.)";
 
-obj_hole.dialog = 1;
-message[0] = "\W* Hello, " + global.username + ".";
-message[1] = "\W* I am broadcasting to your mind as I believe you are the one.";
-message[2] = "\W* I am dying.";
-message[3] = "\W* You can help me.";
-message[4] = "\W* You \Rwill \Whelp me."
-message[5] = "\W* Collect the dankest, rarest pepe.";
-message[6] = "\W* After that is done, bring it to me.";
-message[7] = "\W* I will reward you after I am healthy once again.";
-message[8] = "\W* Goodbye.";
-TextBox(message, "none", sfx_whisper, fnt_8bit);
-
-instance_destroy();
+event_inherited();
 </string>
           </argument>
         </arguments>

@@ -60,6 +60,7 @@
     <instance objName="obj_hole" x="158" y="148" name="inst_36EE37ED" locked="0" code="" scaleX="5.13000011444092" scaleY="2.9375" colour="4294967295" rotation="0"/>
     <instance objName="obj_deepGuy" x="222" y="116" name="inst_CB5EF2F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="warp_0to1" x="316" y="116" name="inst_D6473F63" locked="0" code="" scaleX="0.189999997615814" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_global" x="0" y="0" name="inst_C7BC54F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

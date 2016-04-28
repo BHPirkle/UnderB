@@ -42,31 +42,3 @@ if (!listening) {
         image_index = 0;
     }
 }
-
-if (close) {
-    game_end();
-}
-
-if (fullscreen) {
-    if (!window_get_fullscreen()) {
-        window_set_fullscreen(true);
-    } else {
-        window_set_fullscreen(false);
-    }
-}
-
-// Debug keys.
-if (debug) {
-    if (nextRoom) {
-        room_goto_next();
-    }
-            
-    if (previousRoom) {
-        room_goto_previous();
-    }
-            
-    if (showCollisions) {
-        if (instance_exists(obj_collision)) obj_collision.visible = true;
-        if (instance_exists(obj_npc_collision)) obj_npc_collision.visible = true;
-    }
-}

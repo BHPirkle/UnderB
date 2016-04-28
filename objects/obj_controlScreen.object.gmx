@@ -64,7 +64,7 @@ draw_set_font(fnt_small);
 draw_set_color(c_gray);
 //draw_text(69, 231, "UNDERBUTT V1.000 (C) BH PIRKLE 2016");
 // Enable above once there is a stable release?
-draw_text(99, 231, "UNDERBUTT IN-DEV BUILD 4");
+draw_text(99, 231, "UNDERBUTT IN-DEV BUILD " + string(global.buildNumber));
 </string>
           </argument>
         </arguments>
