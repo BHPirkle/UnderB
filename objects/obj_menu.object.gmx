@@ -28,8 +28,20 @@
             <string>/// Initializes a few variables and an array.
 selection = 0;
 global.dir = 0;
+global.love = 1;
+global.hp = 10;
+global.maxHP = 10;
+global.attack = 1;
+global.exAttack = 0;
+global.defence = 1;
+global.exDefence = 0;
+global.xp = 0;
+global.gold = 0;
+global.kills = 0;
+global.inBattle = false;
 
-option[0] = "New Game";
+option[0] = "Start";
+if (file_exists("file0")) option[0] = "Reset";
 option[1] = "Continue";
 option[2] = "Controls";
 option[3] = "Quit Game";
@@ -60,14 +72,13 @@ switch (selection) {
     case 0: // New Game
     {
         room_goto(rm_name);
-        //room_goto(rm_sphome);
         
         break;
     }
     
     case 1: // Load Game
     {
-        // Unimplemented.
+        Load("file0");
         
         break;
     }

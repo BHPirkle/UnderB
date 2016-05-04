@@ -32,6 +32,7 @@ if (global.username = "AAAAAA") ask = "Not very creative...?";
 if (global.username = "sans") ask = "sure.";
 if (global.username = "Dalton") ask = "Slightly unoriginal... but okay.";
 if (global.username = "Matthe") ask = "is daym out yet?";
+if (global.username = "Genni") ask = "Why do you want to know? :)";
 color[0] = c_white;
 color[1] = c_white;
 scale = 1;

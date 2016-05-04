@@ -105,21 +105,11 @@ draw_set_alpha(1);
 {
     // Draws the box.
     draw_set_color(c_white);
-    draw_rectangle
-    (   
-        32, 320, 
-        608, 470, 
-        false
-    );
+    if (!global.inBattle) draw_rectangle(32, 320, 608, 470, false);
     // Text box outline.
         
     draw_set_color(c_black);
-    draw_rectangle
-    (
-        38, 326, 
-        602, 464, 
-        false
-    );
+    if (!global.inBattle) draw_rectangle(38, 326, 602, 464, false);
     // Actual text box.
 }
 </string>
@@ -154,7 +144,7 @@ t++;
 message_end = array_length_1d(message);
 
 if (message_end &gt; 0) {
-    // Variables.
+    // Variables
     switch (font)
     {
         case fnt_8bit: // 8Bit Operator JVE

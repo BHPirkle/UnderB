@@ -30,12 +30,6 @@
       <sprite>sprites\spr_player_l</sprite>
       <sprite>sprites\spr_player_r</sprite>
     </sprites>
-    <sprites name="Dev">
-      <sprite>sprites\spr_dev_u</sprite>
-      <sprite>sprites\spr_dev_d</sprite>
-      <sprite>sprites\spr_dev_l</sprite>
-      <sprite>sprites\spr_dev_r</sprite>
-    </sprites>
     <sprites name="Mom">
       <sprite>sprites\spr_mom_u</sprite>
       <sprite>sprites\spr_mom_d</sprite>
@@ -52,7 +46,6 @@
     <sprite>sprites\spr_leftslantcollision</sprite>
     <sprite>sprites\spr_rightslantcollision</sprite>
     <sprite>sprites\spr_warp</sprite>
-    <sprite>sprites\spr_sans</sprite>
     <sprite>sprites\spr_heart</sprite>
     <sprite>sprites\spr_global</sprite>
     <sprite>sprites\spr_sign0</sprite>
@@ -79,6 +72,8 @@
     <script>scripts\TextBox.gml</script>
     <script>scripts\NPCMove.gml</script>
     <script>scripts\Fade.gml</script>
+    <script>scripts\Save.gml</script>
+    <script>scripts\Load.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_8bit</font>
@@ -86,6 +81,7 @@
     <font>fonts\fnt_wd</font>
     <font>fonts\fnt_papy</font>
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_mars</font>
   </fonts>
   <objects name="objects">
     <objects name="General">
@@ -114,6 +110,7 @@
         <object>objects\obj_fadeOut</object>
         <object>objects\obj_fadeIn</object>
         <object>objects\obj_controlScreen</object>
+        <object>objects\obj_battle</object>
       </objects>
     </objects>
     <objects name="Events">
@@ -156,6 +153,7 @@
     <room>rooms\rm_deep</room>
     <room>rooms\rm_pineforest</room>
     <room>rooms\rm_sphome</room>
+    <room>rooms\rm_battleTest</room>
   </rooms>
   <constants number="2">
     <constant name="FACING">global.dir</constant>

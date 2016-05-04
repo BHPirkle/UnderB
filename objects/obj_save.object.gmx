@@ -96,12 +96,12 @@ if (openSave) {
     
     if (!file_exists("file0")) {
         draw_set_color(c_white);
-        draw_text(69 * 2, 72 * 2, "EMPTY");
-        draw_text(139 * 2, 72 * 2, "LV 0");
-        draw_text(209 * 2, 72 * 2, "0:00");
-        draw_text(69 * 2, 92 * 2, "---");
-        draw_text(84 * 2, 122 * 2, "Save");
-        draw_text(174 * 2, 122 * 2, "Return");
+        draw_text(70 * 2, 70 * 2, "EMPTY");
+        draw_text(140 * 2, 70 * 2, "LV 0");
+        draw_text(210 * 2, 70 * 2, "0:00");
+        draw_text(70 * 2, 90 * 2, "---");
+        draw_text(85 * 2, 120 * 2, "Save");
+        draw_text(175 * 2, 120 * 2, "Return");
     }
 }
 </string>
@@ -130,7 +130,7 @@ if (openSave) {
 draw_sprite_ext(spr_save, 0, x, y, 1, 1, angle, c_yellow, 1);
 
 angle += 2;
-if (angle == 358) angle = 0;
+if (angle == 358) {angle = 0; angle += 1}
 </string>
           </argument>
         </arguments>
