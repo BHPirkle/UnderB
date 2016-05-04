@@ -55,6 +55,11 @@
     <sprite>sprites\spr_closing1</sprite>
     <sprite>sprites\spr_closing2</sprite>
     <sprite>sprites\spr_save</sprite>
+    <sprite>sprites\spr_fightbt</sprite>
+    <sprite>sprites\spr_actbt</sprite>
+    <sprite>sprites\spr_itembt</sprite>
+    <sprite>sprites\spr_mercybt</sprite>
+    <sprite>sprites\spr_hpname</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
@@ -146,6 +151,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_battleTest</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_controls</room>
     <room>rooms\rm_name</room>
@@ -153,7 +159,6 @@
     <room>rooms\rm_deep</room>
     <room>rooms\rm_pineforest</room>
     <room>rooms\rm_sphome</room>
-    <room>rooms\rm_battleTest</room>
   </rooms>
   <constants number="2">
     <constant name="FACING">global.dir</constant>
