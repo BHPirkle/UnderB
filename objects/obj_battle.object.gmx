@@ -72,15 +72,15 @@ draw_sprite(spr_hpname, 0, 244, 405);
 draw_text(314, 400, "20 / 20");
 
 if (!keyboard_check(ord("Y"))) {
-draw_sprite(spr_fightbt, 0, 32, 432);
+draw_sprite(spr_fitebt, 0, 32, 432);
 draw_sprite(spr_actbt, 0, 185, 432);
-draw_sprite(spr_itembt, 0, 345, 432);
+draw_sprite(spr_memesbt, 0, 345, 432);
 draw_sprite(spr_mercybt, 0, 500, 432);
 } else {
-draw_sprite_ext(spr_fightbt, 0, 32, 432, 1, 1, 0, c_yellow, 1);
-draw_sprite_ext(spr_actbt, 0, 185, 432, 1, 1, 0, c_yellow, 1);
-draw_sprite_ext(spr_itembt, 0, 345, 432, 1, 1, 0, c_yellow, 1);
-draw_sprite_ext(spr_mercybt, 0, 500, 432, 1, 1, 0, c_yellow, 1);
+draw_sprite(spr_fitebt, 1, 32, 432);
+draw_sprite(spr_actbt, 1, 185, 432);
+draw_sprite(spr_memesbt, 1, 345, 432);
+draw_sprite(spr_mercybt, 1, 500, 432);
 }
 
 draw_set_color(c_yellow);

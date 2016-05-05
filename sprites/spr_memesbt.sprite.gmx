@@ -8,7 +8,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>109</bbox_right>
+  <bbox_right>120</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>41</bbox_bottom>
   <HTile>0</HTile>
@@ -17,10 +17,10 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>110</width>
+  <width>121</width>
   <height>42</height>
   <frames>
-    <frame index="0">images\spr_mercybt_0.png</frame>
-    <frame index="1">images\spr_mercybt_1.png</frame>
+    <frame index="0">images\spr_memesbt_0.png</frame>
+    <frame index="1">images\spr_memesbt_1.png</frame>
   </frames>
 </sprite>

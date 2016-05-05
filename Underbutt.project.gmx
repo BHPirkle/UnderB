@@ -55,9 +55,9 @@
     <sprite>sprites\spr_closing1</sprite>
     <sprite>sprites\spr_closing2</sprite>
     <sprite>sprites\spr_save</sprite>
-    <sprite>sprites\spr_fightbt</sprite>
+    <sprite>sprites\spr_fitebt</sprite>
     <sprite>sprites\spr_actbt</sprite>
-    <sprite>sprites\spr_itembt</sprite>
+    <sprite>sprites\spr_memesbt</sprite>
     <sprite>sprites\spr_mercybt</sprite>
     <sprite>sprites\spr_hpname</sprite>
   </sprites>
