@@ -26,12 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>/// Variables and stuff.
+audio_sound_pitch(mus_mogolovonio, 0.9);
+audio_play_sound(mus_mogolovonio, 0, true);
 
 // Global variables.
 global.inBattle = true;
+inFightMenu = false;
+inActMenu = false;
+inMemesMenu = false;
+inMercyMenu = false;
+inMainMenu = true;
 
-message[0] = "\W* looks like you encountered a crummy juncture.";
-TextBox(message, "none", sfx_sans, fnt_8bit);
+message[0] = "\W* You ecountered the \SDummy!";
+TextBox(message, "none", sfx_desc, fnt_8bit);
 
 // Global variables that will be removed after this works.
 global.username = "Devguy";
@@ -50,8 +57,19 @@ tX1 = 606;
 tY1 = 389;
 hpX = 299; // Base of 20 HP.
 maxhpX = 299; // Base of 20 HP.
+act1 = 1;
+act2 = 1;
 
 display_set_gui_size(640, 480);
+
+// 0 = Fight, 1 = act, 2 = memes, 3 = and mercy.
+btSelect = 0;
+
+
+
+// Acting options.
+act[1, 1] = "Check";
+act[1, 2] = "Talk";
 </string>
           </argument>
         </arguments>
@@ -74,11 +92,115 @@ display_set_gui_size(640, 480);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>maxhpX = global.maxHP * 1.25;
+            <string>/// Modifies the HP bar based on global HP variables.
+maxhpX = global.maxHP * 1.25;
 hpX = global.hp * 1.25;
 maxhpX = maxhpX + 275;
 hpX = hpX + 275;
 hpnumX = 314 + (global.maxHP * 1.25);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Handles the buttons.
+GetInput();
+
+if (inMainMenu) {
+if (keyboard_check_pressed(vk_left)) {btSelect--; audio_play_sound(sfx_cycle, 0, false)}
+if (keyboard_check_pressed(vk_right)) {btSelect++; audio_play_sound(sfx_cycle, 0, false)}
+if (btSelect &gt; 3) btSelect = 0;
+if (btSelect &lt; 0) btSelect = 3;
+
+if (interact) {
+    audio_play_sound(sfx_select, 0, false);
+    
+    switch (btSelect) {
+        case 0:
+        {
+            inFightMenu = true;
+            inMainMenu = false;
+            
+            with (obj_dialogue) instance_destroy();
+        }
+        
+        case 1:
+        {
+            inActMenu = true;
+            inMainMenu = false;
+            
+            with (obj_dialogue) instance_destroy();
+        }
+        
+        case 2:
+        {
+            inMemesMenu = true;
+            inMainMenu = false;
+            
+            with (obj_dialogue) instance_destroy();
+        }
+        
+        case 3:
+        {
+            inMercyMenu = true;
+            inMainMenu = false;
+            
+            with (obj_dialogue) instance_destroy();
+        }
+    }
+}
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Handles the menus.
+
+// Act menu.
+if (inActMenu) {
+    if (keyboard_check_pressed(vk_up)) act1--;
+    if (keyboard_check_pressed(vk_down)) act1++;
+    if (keyboard_check_pressed(vk_left)) act2--;
+    if (keyboard_check_pressed(vk_right)) act2--;
+    if (act1 &gt; array_length_2d(act, 0)) act1 = 0;
+    if (act1 &lt; 1) act1 = array_length_2d(act, 1);
+    if (act2 &gt; array_length_2d(act, 1)) act2 = 0;
+    if (act2 &lt; 1) act2 = array_length_2d(act, 1);
+    if (act1 == 1 and act2 == 1) draw_sprite(spr_battleHeart, 0, 24, 278);
+    if (act1 == 1 and act2 == 2) draw_sprite(spr_battleHeart, 0, 320, 278);
+}
 </string>
           </argument>
         </arguments>
@@ -101,7 +223,7 @@ hpnumX = 314 + (global.maxHP * 1.25);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draws the text box.
+            <string>/// Draws the battle stuff.
 draw_set_alpha(1);
 
 draw_sprite(spr_battlebg, 0, 15, 9);
@@ -123,16 +245,97 @@ draw_text(147, 400, "LV " + string(global.love));
 draw_sprite(spr_hpname, 0, 244, 405);
 draw_text(hpnumX, 400, string(global.hp) + " / " + string(global.maxHP));
 
-draw_sprite(spr_fitebt, 0, 32, 432);
-draw_sprite(spr_actbt, 0, 185, 432);
-draw_sprite(spr_memesbt, 0, 345, 432);
-draw_sprite(spr_mercybt, 0, 500, 432);
-
 draw_set_color(c_red);
 draw_rectangle(275, 400, maxhpX, 420, false);
 
 draw_set_color(c_yellow);
 draw_rectangle(275, 400, hpX, 420, false);
+
+draw_sprite(spr_dummy, 0, 219, 138);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draws the buttons.
+draw_sprite(spr_fitebt, 0, 32, 432);
+draw_sprite(spr_actbt, 0, 185, 432);
+draw_sprite(spr_memesbt, 0, 345, 432);
+draw_sprite(spr_mercybt, 0, 500, 432);
+
+switch btSelect {
+    case 0:
+    {
+        draw_sprite(spr_fitebt, 1, 32, 432);
+        if (!inFightMenu) draw_sprite(spr_battleHeart, 0, 41, 446);
+        break;
+    }
+    
+    case 1:
+    {
+        draw_sprite(spr_actbt, 1, 185, 432);
+        if (!inActMenu) draw_sprite(spr_battleHeart, 0, 195, 446);
+        break;
+    }
+    
+    case 2:
+    {
+        draw_sprite(spr_memesbt, 1, 345, 432);
+        if (!inMemesMenu) draw_sprite(spr_battleHeart, 0, 353, 446);
+        break;
+    }
+    
+    case 3:
+    {
+        draw_sprite(spr_mercybt, 1, 500, 432);
+        if (!inMercyMenu) draw_sprite(spr_battleHeart, 0, 508, 446);
+        break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draws the act options.
+if (inActMenu) {
+    draw_set_color(c_white);
+    draw_set_font(fnt_8bit);
+    draw_set_halign(fa_left);
+
+    draw_text(100, 270, "* " + act[1, 1]);
+    draw_text(356, 270, "* " + act[1, 2]);
+}
 </string>
           </argument>
         </arguments>

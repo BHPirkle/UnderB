@@ -3,10 +3,121 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <datafiles number="6" name="datafiles">
+    <datafile>
+      <name>ogg.dll</name>
+      <exists>-1</exists>
+      <size>57344</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>ogg.dll</filename>
+    </datafile>
+    <datafile>
+      <name>OpenAL32.dll</name>
+      <exists>-1</exists>
+      <size>109080</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>OpenAL32.dll</filename>
+    </datafile>
+    <datafile>
+      <name>vorbis.dll</name>
+      <exists>-1</exists>
+      <size>1163264</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>vorbis.dll</filename>
+    </datafile>
+    <datafile>
+      <name>vorbisfile.dll</name>
+      <exists>-1</exists>
+      <size>77824</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>vorbisfile.dll</filename>
+    </datafile>
+    <datafile>
+      <name>wrap_oal.dll</name>
+      <exists>-1</exists>
+      <size>444952</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>wrap_oal.dll</filename>
+    </datafile>
+    <datafile>
+      <name>msvcr100.dll</name>
+      <exists>-1</exists>
+      <size>770384</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>msvcr100.dll</filename>
+    </datafile>
+  </datafiles>
+  <NewExtensions>
+    <extension index="0">extensions\Caster</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="Music">
       <sound>sound\mus_menu</sound>
+      <sound>sound\mus_prebattle1</sound>
+      <sound>sound\mus_battle1</sound>
+      <sound>sound\mus_battle2</sound>
+      <sound>sound\mus_megalovania</sound>
+      <sound>sound\mus_mogolovonio</sound>
     </sounds>
     <sounds name="Ambience">
       <sound>sound\amb_birds</sound>
@@ -37,6 +148,15 @@
       <sprite>sprites\spr_mom_r</sprite>
       <sprite>sprites\spr_mom_dummy</sprite>
     </sprites>
+    <sprites name="Battle">
+      <sprite>sprites\spr_fitebt</sprite>
+      <sprite>sprites\spr_actbt</sprite>
+      <sprite>sprites\spr_memesbt</sprite>
+      <sprite>sprites\spr_mercybt</sprite>
+      <sprite>sprites\spr_hpname</sprite>
+      <sprite>sprites\spr_battlebg</sprite>
+      <sprite>sprites\spr_dummy</sprite>
+    </sprites>
     <sprite>sprites\spr_black</sprite>
     <sprite>sprites\spr_desc</sprite>
     <sprite>sprites\spr_leftslantdesc</sprite>
@@ -47,6 +167,7 @@
     <sprite>sprites\spr_rightslantcollision</sprite>
     <sprite>sprites\spr_warp</sprite>
     <sprite>sprites\spr_heart</sprite>
+    <sprite>sprites\spr_battleHeart</sprite>
     <sprite>sprites\spr_global</sprite>
     <sprite>sprites\spr_sign0</sprite>
     <sprite>sprites\spr_sphouse</sprite>
@@ -55,12 +176,6 @@
     <sprite>sprites\spr_closing1</sprite>
     <sprite>sprites\spr_closing2</sprite>
     <sprite>sprites\spr_save</sprite>
-    <sprite>sprites\spr_fitebt</sprite>
-    <sprite>sprites\spr_actbt</sprite>
-    <sprite>sprites\spr_memesbt</sprite>
-    <sprite>sprites\spr_mercybt</sprite>
-    <sprite>sprites\spr_hpname</sprite>
-    <sprite>sprites\spr_battlebg</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>
