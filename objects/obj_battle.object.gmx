@@ -26,11 +26,30 @@
           <argument>
             <kind>1</kind>
             <string>/// Variables and stuff.
+
+// Global variables.
 global.inBattle = true;
+
+message[0] = "\W* looks like you encountered a crummy juncture.";
+TextBox(message, "none", sfx_sans, fnt_8bit);
+
+// Global variables that will be removed after this works.
+global.username = "Devguy";
+global.love = 1;
+global.hp = 20;
+global.maxHP = 20;
+global.attack = 1;
+global.exAttack = 0;
+global.defence = 1;
+global.exDefence = 0;
+global.xp = 0;
+
 tX = 32;
 tY = 250;
 tX1 = 606;
 tY1 = 389;
+hpX = 299; // Base of 20 HP.
+maxhpX = 299; // Base of 20 HP.
 
 display_set_gui_size(640, 480);
 </string>
@@ -55,22 +74,11 @@ display_set_gui_size(640, 480);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>GetInput();
-if (up) {
-    tX++;
-}
-
-if (down) {
-    tX1--;
-}
-
-if (left) {
-    tY++;
-}
-
-if (right) {
-    tY1--;
-}
+            <string>maxhpX = global.maxHP * 1.25;
+hpX = global.hp * 1.25;
+maxhpX = maxhpX + 275;
+hpX = hpX + 275;
+hpnumX = 314 + (global.maxHP * 1.25);
 </string>
           </argument>
         </arguments>
@@ -96,6 +104,8 @@ if (right) {
             <string>/// Draws the text box.
 draw_set_alpha(1);
 
+draw_sprite(spr_battlebg, 0, 15, 9);
+
 // Draws the box.
 draw_set_color(c_white);
 draw_rectangle(tX, tY, tX1, tY1, false);
@@ -108,25 +118,21 @@ draw_rectangle(tX + 5, tY + 5, tX1 - 5, tY1 - 5, false);
 draw_set_font(fnt_mars);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
-draw_text(30, 400, "AAAAAA");
-draw_text(147, 400, "LV 1");
+draw_text(30, 400, global.username);
+draw_text(147, 400, "LV " + string(global.love));
 draw_sprite(spr_hpname, 0, 244, 405);
-draw_text(314, 400, "20 / 20");
+draw_text(hpnumX, 400, string(global.hp) + " / " + string(global.maxHP));
 
-if (!keyboard_check(ord("Y"))) {
 draw_sprite(spr_fitebt, 0, 32, 432);
 draw_sprite(spr_actbt, 0, 185, 432);
 draw_sprite(spr_memesbt, 0, 345, 432);
 draw_sprite(spr_mercybt, 0, 500, 432);
-} else {
-draw_sprite(spr_fitebt, 1, 32, 432);
-draw_sprite(spr_actbt, 1, 185, 432);
-draw_sprite(spr_memesbt, 1, 345, 432);
-draw_sprite(spr_mercybt, 1, 500, 432);
-}
+
+draw_set_color(c_red);
+draw_rectangle(275, 400, maxhpX, 420, false);
 
 draw_set_color(c_yellow);
-draw_rectangle(275, 400, 299, 420, false);
+draw_rectangle(275, 400, hpX, 420, false);
 </string>
           </argument>
         </arguments>

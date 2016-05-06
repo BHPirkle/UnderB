@@ -60,6 +60,7 @@
     <sprite>sprites\spr_memesbt</sprite>
     <sprite>sprites\spr_mercybt</sprite>
     <sprite>sprites\spr_hpname</sprite>
+    <sprite>sprites\spr_battlebg</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grillbys_abandoned</background>

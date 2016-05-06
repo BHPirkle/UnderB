@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-999999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -155,7 +155,7 @@ if (message_end &gt; 0) {
         
         case fnt_sans: // Comic Sans MS
         {
-            var charWidth = 16;
+            var charWidth = 16.5;
             break;
         }
         
@@ -182,12 +182,8 @@ if (message_end &gt; 0) {
     var tY = 340;
     if (portrait == "none") var tX = 60;
     else var tX = 110
-    /*
-    var tY = view_hview[0] - 55;
-    if (portrait == "none") var tX = 5;
-    else var tX = 60;
-    */
     
+    if (global.inBattle) {var tX = 52; var tY = 270; var lineEnd = 34}
     
     // Next message.
     if (interact) {
