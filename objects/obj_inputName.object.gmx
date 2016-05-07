@@ -334,65 +334,6 @@ color[53] = c_white;
 if (row == 9 and char == 1) color[53] = c_yellow;
 color[54] = c_white;
 if (row == 9 and char == 2) color[54] = c_yellow;
-
-/*
-draw_set_alpha(1);
-
-if (menu == 2) {
-    if (horz == 0) draw_sprite(spr_cursor, 1, 100, 410);
-    if (horz == 1) draw_sprite(spr_cursor, 1, 218, 410);
-    if (horz == 2) draw_sprite(spr_cursor, 1, 418, 410);
-    
-    if (keyboard_check_pressed(vk_left)) horz--;
-    if (keyboard_check_pressed(vk_right)) horz++;
-    if (horz &lt; 0) horz = 2;
-    if (horz &gt; 2) horz = 0;
-    
-    if (keyboard_check_pressed(vk_up)) {menu = 1; vert = 3; horz = 4;}
-}
-if (menu == 1) {
-    draw_sprite(spr_cursor, 0, 120 + (horz * 64), 280 + (vert * 28));
-    
-    if (keyboard_check_pressed(vk_left)) horz--;
-    if (keyboard_check_pressed(vk_right)) horz++;
-    if (horz &lt; 0) horz = 6;
-    if (horz &gt; 6) horz = 0;
-    
-    if (keyboard_check_pressed(vk_up)) vert--;
-    if (keyboard_check_pressed(vk_down)) vert++;
-    
-    if (horz &lt;= 7 &amp;&amp; horz &gt;= 0)
-    {
-        if (vert &gt; 3) {menu = 2; vert = 0; horz = 1;}
-        if (vert &lt; 0) {menu = 0; vert = 3;}
-    }
-    
-    if (vert == 3) {
-        if (horz &gt; 4) {horz = 0;}
-    }
-}
-if (menu == 0) {
-    draw_sprite(spr_cursor, 0, 118 + (horz * 64), 160 + (vert * 28));
-    
-    if (keyboard_check_pressed(vk_left)) horz--;
-    if (keyboard_check_pressed(vk_right)) horz++;
-    if (horz &lt; 0) horz = 6;
-    if (horz &gt; 6) horz = 0;
-    
-    if (keyboard_check_pressed(vk_up)) vert--;
-    if (keyboard_check_pressed(vk_down)) vert++;
-    
-    if (horz &lt;= 7 &amp;&amp; horz &gt;= 0)
-    {
-        if (vert &gt; 3) {menu = 1; vert = 0;}
-        if (vert &lt; 0) {vert = 0;}
-    }
-    
-    if (vert == 3) {
-        if (horz &gt; 4) {horz = 0;}
-    }
-}
-*/
 </string>
           </argument>
         </arguments>

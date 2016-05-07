@@ -170,41 +170,6 @@ if (interact) {
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Handles the menus.
-
-// Act menu.
-if (inActMenu) {
-    if (keyboard_check_pressed(vk_up)) act1--;
-    if (keyboard_check_pressed(vk_down)) act1++;
-    if (keyboard_check_pressed(vk_left)) act2--;
-    if (keyboard_check_pressed(vk_right)) act2--;
-    if (act1 &gt; array_length_2d(act, 0)) act1 = 0;
-    if (act1 &lt; 1) act1 = array_length_2d(act, 1);
-    if (act2 &gt; array_length_2d(act, 1)) act2 = 0;
-    if (act2 &lt; 1) act2 = array_length_2d(act, 1);
-    if (act1 == 1 and act2 == 1) draw_sprite(spr_battleHeart, 0, 24, 278);
-    if (act1 == 1 and act2 == 2) draw_sprite(spr_battleHeart, 0, 320, 278);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="8" enumb="64">
       <action>
@@ -306,35 +271,6 @@ switch btSelect {
         if (!inMercyMenu) draw_sprite(spr_battleHeart, 0, 508, 446);
         break;
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draws the act options.
-if (inActMenu) {
-    draw_set_color(c_white);
-    draw_set_font(fnt_8bit);
-    draw_set_halign(fa_left);
-
-    draw_text(100, 270, "* " + act[1, 1]);
-    draw_text(356, 270, "* " + act[1, 2]);
 }
 </string>
           </argument>

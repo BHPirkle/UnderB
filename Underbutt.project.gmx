@@ -107,9 +107,7 @@
       <filename>msvcr100.dll</filename>
     </datafile>
   </datafiles>
-  <NewExtensions>
-    <extension index="0">extensions\Caster</extension>
-  </NewExtensions>
+  <NewExtensions/>
   <sounds name="sound">
     <sounds name="Music">
       <sound>sound\mus_menu</sound>
